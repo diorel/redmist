@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{82C3C014-6057-40FA-8A55-E0F85484B743}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Share_PointSIOC</RootNamespace>
+    <AssemblyName>Share_PointSIOC</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>es</SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>Share_PointSIOC.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>Share_PointSIOC.App</SilverlightAppEntry>
+    <TestPageFileName>Share_PointSIOCTestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>true</EnableOutOfBrowser>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>
+    </LinkedServerProject>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Liquid">
+      <HintPath>..\..\..\..\..\Downloads\Liquid Controls 5.2.7\Liquid.dll</HintPath>
+    </Reference>
+    <Reference Include="Liquid.Components">
+      <HintPath>..\..\..\..\..\Downloads\Liquid Controls 5.2.7\Liquid.Components.dll</HintPath>
+    </Reference>
+    <Reference Include="Liquid.Menu">
+      <HintPath>..\..\..\..\..\Downloads\Liquid Controls 5.2.7\Liquid.Menu.dll</HintPath>
+    </Reference>
+    <Reference Include="Liquid.Popup">
+      <HintPath>..\..\..\..\..\Downloads\Liquid Controls 5.2.7\Liquid.Popup.dll</HintPath>
+    </Reference>
+    <Reference Include="Liquid.TreeView">
+      <HintPath>..\..\..\..\..\Downloads\Liquid Controls 5.2.7\Liquid.TreeView.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Data.Input, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindow2.xaml.cs">
+      <DependentUpon>ChildWindow2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindow3.xaml.cs">
+      <DependentUpon>ChildWindow3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MetroChildWindow.cs" />
+    <Compile Include="MetroChildWindow.xaml.cs">
+      <DependentUpon>MetroChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="ChildWindow2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindow3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MetroChildWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\bg2.jpg" />
+    <Resource Include="images\logo.jpg" />
+    <Resource Include="images\ayuda_central2.jpg" />
+    <Resource Include="images\closed.png" />
+    <Resource Include="images\db.png" />
+    <Resource Include="images\doc.png" />
+    <Resource Include="images\docx.png" />
+    <Resource Include="images\down.png" />
+    <Resource Include="images\exe.png" />
+    <Resource Include="images\folder.png" />
+    <Resource Include="images\folderOpen.png" />
+    <Resource Include="images\gif.png" />
+    <Resource Include="images\jpg.png" />
+    <Resource Include="images\large\ascx.png" />
+    <Resource Include="images\large\asmx.png" />
+    <Resource Include="images\large\aspx.png" />
+    <Resource Include="images\large\avi.png" />
+    <Resource Include="images\large\config.png" />
+    <Resource Include="images\large\cs.png" />
+    <Resource Include="images\large\css.png" />
+    <Resource Include="images\large\doc.png" />
+    <Resource Include="images\large\docx.png" />
+    <Resource Include="images\large\exe.png" />
+    <Resource Include="images\large\folder.png" />
+    <Resource Include="images\large\gif.png" />
+    <Resource Include="images\large\htm.png" />
+    <Resource Include="images\large\html.png" />
+    <Resource Include="images\large\jpg.png" />
+    <Resource Include="images\large\js.png" />
+    <Resource Include="images\large\mp3.png" />
+    <Resource Include="images\large\mp4.png" />
+    <Resource Include="images\large\pdf.png" />
+    <Resource Include="images\large\png.png" />
+    <Resource Include="images\large\txt.png" />
+    <Resource Include="images\large\unknown.png" />
+    <Resource Include="images\large\xaml.png" />
+    <Resource Include="images\large\xls.png" />
+    <Resource Include="images\large\xlsx.png" />
+    <Resource Include="images\large\xml.png" />
+    <Resource Include="images\large\zip.png" />
+    <Resource Include="images\mp3.png" />
+    <Resource Include="images\mp4.png" />
+    <Resource Include="images\mpp.png" />
+    <Resource Include="images\msg.png" />
+    <Resource Include="images\msi.png" />
+    <Resource Include="images\open.png" />
+    <Resource Include="images\pdf.png" />
+    <Resource Include="images\png.png" />
+    <Resource Include="images\ppt.png" />
+    <Resource Include="images\pptx.png" />
+    <Resource Include="images\vsd.png" />
+    <Resource Include="images\xls.png" />
+    <Resource Include="images\xlsx.png" />
+    <Resource Include="images\zip.png" />
+    <Resource Include="images\large\ppt.png" />
+    <Resource Include="images\large\pptx.png" />
+    <Resource Include="images\exit.png" />
+    <Resource Include="images\warning.png" />
+    <Resource Include="images\info.png" />
+    <Resource Include="images\infor.png" />
+    <Resource Include="images\logocompartamosbco.jpg" />
+    <Content Include="Properties\OutOfBrowserSettings.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
