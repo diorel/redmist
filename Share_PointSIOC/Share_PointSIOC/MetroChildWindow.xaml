@@ -42,8 +42,10 @@
             </ToolTipService.ToolTip>
         </Button>
         <Image x:Name="buttonImage" HorizontalAlignment="Left" Source="/Share_PointSIOC;component/images/info.png" Width="50" Height="50" />
-        <TextBlock HorizontalAlignment="Right" TextWrapping="Wrap" Text="Crea un Arból (TreeView) con las carpetas que contienen toda la documentación perteneciente al Proyecto SIOC Internacional, si no se tienen los permisos no se podra instalar la aplicación en el escritorio de la PC" 
+        <TextBlock HorizontalAlignment="Right" TextWrapping="Wrap" Text="Prueba Github" 
                    VerticalAlignment="Center" Foreground="#FFBF7500" FontFamily="Verdana" FontSize="17" Margin="60,0,0,0"/>
+        <!--<TextBlock HorizontalAlignment="Right" TextWrapping="Wrap" Text="Crea un Arból (TreeView) con las carpetas que contienen toda la documentación perteneciente al Proyecto SIOC Internacional, si no se tienen los permisos no se podra instalar la aplicación en el escritorio de la PC" 
+                   VerticalAlignment="Center" Foreground="#FFBF7500" FontFamily="Verdana" FontSize="17" Margin="60,0,0,0"/>-->
 
     </Grid>
 </controls:ChildWindow>
