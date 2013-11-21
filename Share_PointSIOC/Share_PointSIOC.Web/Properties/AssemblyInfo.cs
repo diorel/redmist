@@ -18,6 +18,7 @@ using System.Runtime.InteropServices;
 // para los componentes COM. Si necesita obtener acceso a un tipo de este ensamblado desde 
 // COM, establezca el atributo ComVisible como true en este tipo.
 // hola Rul
+// jasdjkshdfhergblsdgbjlsdglsdb
 [assembly: ComVisible(false)]
 
 // El siguiente GUID sirve como identificador de typelib si este proyecto se expone a COM
